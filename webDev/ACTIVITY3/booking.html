@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book IPL 2026 Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#matches">Matches</a>
+            <a href="booking.html" aria-current="page">Book Ticket</a>
+            <a href="index.html#my-bookings">My Bookings</a>
+            <a href="index.html#guidelines">Guidelines</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking" aria-labelledby="booking-heading">
+            <h2 id="booking-heading">IPL 2026 Ticket Booking</h2>
+
+            <form action="#booking-complete" method="get" autocomplete="on">
+                <p>
+                    <label for="full-name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full-name"
+                        minlength="3"
+                        maxlength="50"
+                        pattern="[A-Za-z][A-Za-z ]{2,49}"
+                        title="Enter 3 to 50 letters and spaces only."
+                        required
+                        autocomplete="name"
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        maxlength="100"
+                        required
+                        autocomplete="email"
+                    >
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        minlength="10"
+                        maxlength="15"
+                        pattern="[0-9 +()-]{10,15}"
+                        title="Enter a valid phone number between 10 and 15 characters."
+                        required
+                        autocomplete="tel"
+                    >
+                </p>
+
+                <p>
+                    <label for="match">Select Match:</label>
+                    <select id="match" name="match" required>
+                        <option value="">-- Select a match --</option>
+                        <option value="match-1">Match 1: Chennai Super Kings vs Mumbai Indians</option>
+                        <option value="match-2">Match 2: Royal Challengers Bengaluru vs Kolkata Knight Riders</option>
+                        <option value="match-3">Match 3: Sunrisers Hyderabad vs Chennai Super Kings</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="stand-category">Stand Category:</label>
+                    <select id="stand-category" name="stand-category" required>
+                        <option value="">-- Select a stand --</option>
+                        <option value="general">General</option>
+                        <option value="premium">Premium</option>
+                        <option value="vip">VIP</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="ticket-quantity">Number of Tickets:</label>
+                    <input
+                        type="number"
+                        id="ticket-quantity"
+                        name="ticket-quantity"
+                        min="1"
+                        max="10"
+                        required
+                    >
+                </p>
+
+                <fieldset>
+                    <legend>Booking Preference:</legend>
+                    <label>
+                        <input type="radio" name="booking-preference" value="email-ticket" required>
+                        Send ticket by email
+                    </label>
+                    <label>
+                        <input type="radio" name="booking-preference" value="mobile-ticket">
+                        Send ticket to mobile
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the ticket booking terms and guidelines.
+                    </label>
+                </p>
+
+                <button type="submit">Submit Booking</button>
+                <button type="reset">Reset Form</button>
+            </form>
+
+            <aside id="booking-complete" aria-labelledby="booking-note-heading">
+                <h3 id="booking-note-heading">Before You Submit</h3>
+                <p>Complete every required field. Your browser will show a validation message if any detail is missing or invalid.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IPL Ticket Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
